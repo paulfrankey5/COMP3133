@@ -47,7 +47,6 @@ fs.createReadStream(inputFile)
     }
 
     // c) Filter United States -> usa.txt
-    // CSV에 "United States" 혹은 "United States of America" 등 변형이 있을 수 있어 둘 다 처리
     if (country === "united states" || country === "united states of america") {
       usaWriteStream.write(`united states,${year},${population}\n`);
       usaCount++;
